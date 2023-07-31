@@ -1,0 +1,119 @@
+@media (max-width: 600px) {
+    nav {
+        padding: 0 46px;
+    }
+    
+    .heroDescription h1 {
+        font-size: 30px;
+    }
+
+    .heroDescription h2 {
+        font-size: 14px;
+    }
+
+    .menuList {
+        background-color: #05610d;
+        top: 0;
+        right: 0;
+        margin-top: 80px;
+        fill-opacity: 0.5;
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+    }
+
+    .menuList li {
+        width: 200px;
+        padding: 20px 10px;
+        border-bottom: 1px solid #222222;
+        text-align: right;
+        color: white;
+    }
+    
+    .menuList a:hover {
+        border-bottom: 2px solid #ffffff;
+        color: white;
+    }
+
+    .open .menuList {
+        transform: translateX(0);
+    }
+
+    .menuButton {
+        min-width: 44px;
+        min-height: 44px;
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 1.25rem;
+        display: block;
+        z-index: 2;
+        cursor: pointer;
+    }
+    
+    .menu i.fa-times,
+    .menu.open i.fa-bars {
+        display: none;
+        animation: enter 0.8s;
+    }
+
+    .menu.open i.fa-times,
+    .menu i.fa-bars {
+        display: block;
+        animation: enter 0.8s;
+    }
+
+    .contentHeading {
+        margin: 40px auto;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .detail, restoran-review {
+        width: 100%;
+    }
+     
+    .restoran {
+        grid-template-columns: auto 1fr;
+    }
+     
+    .restoran .restoran__title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+     
+    .restoran .restoran__overview {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .like {
+        bottom: 15px;
+        right: 10px;
+    }
+
+    .footerText {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .restoran-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .restoran-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+   
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+}
